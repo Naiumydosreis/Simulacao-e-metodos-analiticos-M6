@@ -16,10 +16,11 @@ public class Estatisticas {
     }
 
     public void imprimir(double tempoTotal) {
-        System.out.println("\nDistribuição de Probabilidades:");
+        System.out.println("\nDistribuição de Probabilidades e Tempos Acumulados:");
         for (Map.Entry<Integer, Double> entry : tempoEstados.entrySet()) {
-            double prob = entry.getValue() / tempoTotal;
-            System.out.printf("Estado %d: %.5f\n", entry.getKey(), prob);
+            double tempoAcumulado = entry.getValue();
+            double probabilidade = tempoAcumulado / tempoTotal;
+            System.out.printf("Estado %d: Tempo Acumulado = %.5f, Probabilidade = %.5f\n", entry.getKey(), tempoAcumulado, probabilidade);
         }
     }
 }
