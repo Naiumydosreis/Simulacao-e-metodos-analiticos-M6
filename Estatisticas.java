@@ -20,7 +20,7 @@ public class Estatisticas {
         for (Map.Entry<Integer, Double> entry : tempoEstados.entrySet()) {
             double tempoAcumulado = entry.getValue();
             double probabilidade = tempoAcumulado / tempoTotal;
-            System.out.printf("Estado %d: Tempo Acumulado = %.5f, Probabilidade = %.5f\n", entry.getKey(), tempoAcumulado, probabilidade);
+            System.out.printf("Estado %d: Tempo Acumulado = %.5f - Probabilidade = %.5f\n", entry.getKey(), tempoAcumulado, probabilidade);
         }
     }
 }
